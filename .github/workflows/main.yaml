@@ -4,9 +4,7 @@ on:
   push:
     branches:
       - 'feature/**'
-#       TODO (4) add main branch
       - 'main'
-#       TODO (7) add hotfix branch
       - 'hotfix'
 
 
@@ -70,7 +68,6 @@ jobs:
           name: pytest-html
           path: htmlcov
 
-#TODO (4) uncomment
   deploy:
     if: github.ref == 'refs/heads/main'
     needs: [build]
